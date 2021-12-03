@@ -42,7 +42,8 @@ function updateTime(){
 }
 
 function init_phone(){
-    fetch('http://127.0.0.1:8080/phone/config/config.json').then(response => response.text()).then(function (data){
+    fetch('http://localhost:42600/Phone/config/config.json').then(response => response.text()).then(function (data){
+        console.log(data);
         data = JSON.parse(data);
         let home_config = data.home;
 
@@ -63,7 +64,7 @@ function init_phone(){
 }
 
 function add_section(id,path){
-    fetch('http://127.0.0.1:8080/phone/app/'+ path).then(response => response.text()).then(function (data){
+    fetch('http://localhost:42600/Phone/app/'+ path).then(response => response.text()).then(function (data){
         let element = document.createElement('section');
         element.innerHTML = data;
         element.classList.add('content');
