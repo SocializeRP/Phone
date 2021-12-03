@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- Notifications -->
+    <link rel="stylesheet" href="/notification/notification.css">
+    <script src="/notification/notification.js"></script>
+    <script src="js/ue4.js"></script>
+</head>
+<body>
+<div class="tablet">
+    <div class="top">
+        <div class="lens_black"></div>
+        <div class="lens_color"></div>
+    </div>
+    <section class="content" id="home">
+        <div class="content_infos">
+            <div><h1>7:49 Tue Oct 17</h1></div>
+            <div><i class="material-icons light">wifi</i><p>100%</p><i class="material-icons light">battery_full</i></div>
+        </div>
+        <div class="app_container">
+            <div class="row"></div>
+        </div>
+        <div class="bottom_icons">
+            <div class="pages"><span></span><span class="active"></span><span></span></div>
+            <div class="menu">
+                <div class="btn">
+                    <div id="btn_message" onclick="new_section('message');load_message_list()" style="background: #009432"><i class="material-icons light">mode_comment</i></div>
+                    <div onclick="new_notification('warning','This application will be available soon :)')" style="background: #0652DD"><i class="material-icons light">call</i></div>
+                    <div onclick="new_section('param')" style="background: #CCCCCC"><i class="material-icons dark">settings</i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="param" style="display: none">
+        <div class="content_infos">
+            <div><h1>7:49 Tue Oct 17</h1></div>
+            <div><i class="material-icons dark">wifi</i><p>100%</p><i class="material-icons dark">battery_full</i></div>
+        </div>
+        <div class="param_top">
+            <h1>Settings</h1>
+        </div>
+        <div class="param_content" id="settings_home">
+            <div onclick="new_setting_menu('settings_background')"><i class="material-icons" style="background: #009432">invert_colors</i><h2>Background</h2></div>
+            <div><i class="material-icons" style="background: #EA2027">logout</i><h2>Leave game</h2></div>
+        </div>
+        <div class="param_background" style="display: none" id="settings_background">
+            <h2>Choose a background :</h2>
+            <div class="choose_back">
+                <div class="back_red" onclick="home_background('back_red');new_section('home');new_setting_menu('settings_home')"></div>
+                <div class="back_purple" onclick="home_background('back_purple');new_section('home');new_setting_menu('settings_home')"></div>
+                <div class="back_meridian" onclick="home_background('back_meridian');new_section('home');new_setting_menu('settings_home')"></div>
+                <div class="back_green" onclick="home_background('back_green');new_section('home');new_setting_menu('settings_home')"></div>
+                <div class="back_default" onclick="home_background('back_default');new_section('home');new_setting_menu('settings_home')"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="message" style="display: none">
+        <div class="content_infos">
+            <div><h1>7:49 Tue Oct 17</h1></div>
+            <div><i class="material-icons dark">wifi</i><p>100%</p><i class="material-icons dark">battery_full</i></div>
+        </div>
+        <div id="msg_home" class="msg_home msg_section">
+            <div class="msg_top">
+                <div>
+                    <h1>Messages</h1>
+                    <p>Your phone number : 20 45 78</p>
+                </div>
+                <div>
+                    <i onclick="new_conversation()" class="material-icons">add</i>
+                </div>
+            </div>
+            <div class="msg_list"></div>
+        </div>
+        <div id="msg_show" class="msg_show msg_section" style="display: none">
+            <i class="material-icons msg_back" onclick="load_message_list(); messages_are_open = false">arrow_back_ios_new</i>
+            <div class="msg_info">
+                <div>
+                    <i>V</i>
+                    <h1>Victor</h1>
+                </div>
+            </div>
+            <div class="msg_content"></div>
+            <div class="msg_text">
+                <input id="new_message_input" onkeyup="if(event.keyCode === 13 && this.value !== ''){message_sent()}">
+                <i onclick="if(document.getElementById('new_message_input').value !== ''){message_sent()}" class="material-icons">send</i>
+            </div>
+        </div>
+        <div id="msg_new" class="msg_new msg_section" style="display: none">
+            <i class="material-icons msg_back" onclick="load_message_list();">arrow_back_ios_new</i>
+            <div class="msg_info">
+                <div>
+                    <h2>New message</h2>
+                </div>
+            </div>
+            <div class="msg_form">
+                <div>
+                    <label>Name</label>
+                    <input type="text" id="msg_input_name">
+                </div>
+                <div>
+                    <label>Phone number</label>
+                    <input type="number" id="msg_input_phone">
+                </div>
+                <button>Create</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom">
+        <div onclick="new_section('home');ue4('back', {});messages_are_open = false"><span></span></div>
+    </div>
+</div>
+<script src="js/bank.js"></script>
+<script src="js/inventory.js"></script>
+<script src="js/message.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/config.js"></script>
+</body>
+</html>

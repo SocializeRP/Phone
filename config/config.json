@@ -1,0 +1,103 @@
+{
+  "home" : [
+    {
+      "id" : "inventory",
+      "page_path" : "inventory.html",
+      "name" : "Inventory",
+      "icon" : "inventory_2",
+      "background" : "#cc8e35",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "bank",
+      "page_path" : "bank.html",
+      "name" : "Bank",
+      "icon" : "account_balance",
+      "background" : "#218c74",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Map",
+      "icon" : "location_on",
+      "background" : "#EA2027",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Stock Exchange",
+      "icon" : "trending_up",
+      "background" : "#12CBC4",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Garage",
+      "icon" : "directions_car",
+      "background" : "#EE5A24",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Licences",
+      "icon" : "badge",
+      "background" : "#A3CB38",
+      "color" : "rgb(40,40,40)",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Subway",
+      "icon" : "train",
+      "background" : "#6F1E51",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Photo",
+      "icon" : "photo_camera",
+      "background" : "#CCCCCC",
+      "color" : "rgb(40,40,40)",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Instalize",
+      "icon" : "camera",
+      "background" : "#FC427B",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Teslo",
+      "icon" : "tungsten",
+      "background" : "#eb4d4b",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    },
+    {
+      "id" : "",
+      "page_path" : "",
+      "name" : "Store",
+      "icon" : "store",
+      "background" : "#130f40",
+      "color" : "#e5e5e5",
+      "custom_functions": ""
+    }
+  ]
+}
